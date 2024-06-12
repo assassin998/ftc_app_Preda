@@ -43,7 +43,7 @@ public class verstappen extends LinearOpMode {
                 divider = 1;
             }
 
-            //normalizer++
+            //normalizer
             FL.setPower((front + rotate) / divider);
             FR.setPower((front - rotate) / divider);
             BL.setPower((front + rotate) / divider);
