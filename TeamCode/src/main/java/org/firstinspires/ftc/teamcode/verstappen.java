@@ -7,7 +7,7 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
 @TeleOp
-public class verstappen_drive extends LinearOpMode {
+public class verstappen extends LinearOpMode {
     private DcMotor FL;
     private DcMotor FR;
     private DcMotor BL;
