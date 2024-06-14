@@ -35,18 +35,21 @@ public class verstappen extends LinearOpMode {
             }
 
             float divider;
-            divider = Math.max( Math.max(front - rotate, front + rotate), Math.max(-front + rotate, -front - rotate));
+            divider = Math.abs(front) + Math.abs(rotate);
 
             if(divider <= 1) {
-                divider = 1;
+                FR.setPower(front - rotate);
+                FL.setPower(front + rotate);
+                BL.setPower(front + rotate);
+                BR.setPower(front - rotate);
+            } else {
+                FL.setPower((front + rotate) / divider);
+                FR.setPower((front - rotate) / divider);
+                BL.setPower((front + rotate) / divider);
+                BR.setPower((front - rotate) / divider);
+
+
             }
-
-            //normalizer
-            FL.setPower((front + rotate) / divider);
-            FR.setPower((front - rotate) / divider);
-            BL.setPower((front + rotate) / divider);
-            BR.setPower((front - rotate) / divider);
-
         }
     }
 }
